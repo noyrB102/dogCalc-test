@@ -1,25 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog's Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-Sd-5JO">
+                                <rect key="frame" x="73" y="49" width="248" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-Tn-c76">
+                                <rect key="frame" x="58" y="294" width="317" height="335"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Age of your Dog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrE-J2-piG">
+                                <rect key="frame" x="89" y="117" width="197" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="uXu-WM-hzl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWR-FM-4cd">
+                                <rect key="frame" x="163" y="219" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pkF-dd-YFo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateAge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZV-yB-Kya"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTl-hq-74w">
+                                <rect key="frame" x="89" y="269" width="266" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="A7K-dS-LTB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZI-Ol-hN0">
+                                <rect key="frame" x="138" y="174" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="S0w-JA-vC0"/>
+                                    <constraint firstAttribute="height" constant="30" id="as2-zE-c5L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JrE-J2-piG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="73" id="05u-6z-KWi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pZX-Tn-c76" secondAttribute="bottom" constant="38" id="Ftd-jn-XzP"/>
+                            <constraint firstItem="3dn-Sd-5JO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="GR9-UK-g9D"/>
+                            <constraint firstItem="dTl-hq-74w" firstAttribute="leading" secondItem="JrE-J2-piG" secondAttribute="leading" id="Iii-xa-UQf"/>
+                            <constraint firstItem="pZX-Tn-c76" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="K2N-kD-fpr"/>
+                            <constraint firstItem="RWR-FM-4cd" firstAttribute="centerX" secondItem="oZI-Ol-hN0" secondAttribute="centerX" id="NpH-gN-sJW"/>
+                            <constraint firstItem="oZI-Ol-hN0" firstAttribute="top" secondItem="JrE-J2-piG" secondAttribute="bottom" constant="8" symbolic="YES" id="V3O-38-LPw"/>
+                            <constraint firstItem="dTl-hq-74w" firstAttribute="top" secondItem="RWR-FM-4cd" secondAttribute="bottom" constant="20" id="Yvo-Vy-wV7"/>
+                            <constraint firstItem="pZX-Tn-c76" firstAttribute="top" secondItem="RWR-FM-4cd" secondAttribute="bottom" constant="45" id="ZOk-V0-WjR"/>
+                            <constraint firstItem="3dn-Sd-5JO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="57" id="e8v-Lf-jIV"/>
+                            <constraint firstItem="JrE-J2-piG" firstAttribute="top" secondItem="3dn-Sd-5JO" secondAttribute="bottom" constant="14" id="fn3-oq-fdw"/>
+                            <constraint firstItem="oZI-Ol-hN0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="138" id="jkn-Pp-Mf3"/>
+                            <constraint firstAttribute="trailing" secondItem="pZX-Tn-c76" secondAttribute="trailing" id="pud-10-BGq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3dn-Sd-5JO" secondAttribute="trailing" constant="38" id="qKZ-7K-M0q"/>
+                            <constraint firstItem="JrE-J2-piG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rYk-3T-NmZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dTl-hq-74w" secondAttribute="bottom" constant="365" id="t6W-bc-4Ap"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dTl-hq-74w" secondAttribute="trailing" constant="4" id="vk8-te-PzM"/>
+                            <constraint firstItem="RWR-FM-4cd" firstAttribute="top" secondItem="oZI-Ol-hN0" secondAttribute="bottom" constant="15" id="y86-sT-OBl"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="age" destination="oZI-Ol-hN0" id="HjY-MK-snv"/>
+                        <outlet property="resultsLabel" destination="dTl-hq-74w" id="lL9-ri-0uy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="389.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog.jpeg" width="100" height="109"/>
+    </resources>
 </document>
